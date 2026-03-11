@@ -34,13 +34,13 @@ Database banking con tabelle:
 ✓ Importo totale transato in uscita
 ✓ Importo totale transato in entrata
 
-text
+
 
 ### **Indicatori Conti**
 ✓ Numero totale conti posseduti
 ✓ Conti per tipologia (uno per tipo di conto)
 
-text
+
 
 ### **Indicatori per Tipologia Conto**
 Per OGNI tipo di conto:
