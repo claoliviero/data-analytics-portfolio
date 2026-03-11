@@ -9,7 +9,7 @@ Dashboard interattiva **Tableau Public** per **Superstore Europa**. Monitoraggio
 - Strategia marketing prodotti alto potenziale
 - Decisioni basate su dati reali
 
-## 🔗 Live Dashboard
+## 🔗 Live Dashboard :link:
 👉 **[Visualizza Dashboard su Tableau Public](https://public.tableau.com/app/profile/claudio.oliviero/viz/ProgettoFinaleProfessio_AI/Dashboard)**
 
 ## 📊 Dataset
