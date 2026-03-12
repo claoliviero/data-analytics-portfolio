@@ -27,7 +27,7 @@ Dashboard + Story marketing Superstore. Ottimizzazione budget prodotti Europa.
 
 
 
-## 📫 Contattami
+## 📫 Contatti
 **Email:** [Claudio.Oliviero94@hotmail.it]  
 **LinkedIn:** [https://www.linkedin.com/in/claudio-oliviero-08691933b/]  
 **Location:** Bologna, Emilia-Romagna  
