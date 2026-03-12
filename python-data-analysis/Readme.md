@@ -70,5 +70,5 @@ python
 📊 Box plot: distribuzione fatalità per operatore
 📈 Before/After: confronto pre/post 11 Settembre
 
-📁 **File del Progetto**
-👉 :Link: **[Visualizza Progetto su Google Colab]( https://colab.research.google.com/drive/1ftaYy3EFg4pIgHt19HVkYbLKlEtnoKmS?usp=sharing)**
+📁 **File del Progetto** :link:
+👉 :link: **[Visualizza Progetto su Google Colab]( https://colab.research.google.com/drive/1ftaYy3EFg4pIgHt19HVkYbLKlEtnoKmS?usp=sharing)**
