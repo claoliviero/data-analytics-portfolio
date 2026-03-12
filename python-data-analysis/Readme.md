@@ -55,7 +55,7 @@ Variabili:
 🔴 Incidenti più letali (top 10)
 
 ## 🛠️ Tecnologie Python
-```python
+python
 ✅ pandas - data manipulation
 ✅ matplotlib - visualizzazioni base
 ✅ seaborn - grafici statistici avanzati
@@ -70,5 +70,5 @@ Variabili:
 📊 Box plot: distribuzione fatalità per operatore
 📈 Before/After: confronto pre/post 11 Settembre
 
-📁 File del Progetto:
-:link: https://colab.research.google.com/drive/1ftaYy3EFg4pIgHt19HVkYbLKlEtnoKmS?usp=sharing
+📁 **File del Progetto**
+👉 :Link: **[Visualizza Progetto su Google Colab]( https://colab.research.google.com/drive/1ftaYy3EFg4pIgHt19HVkYbLKlEtnoKmS?usp=sharing)**
