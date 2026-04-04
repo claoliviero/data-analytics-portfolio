@@ -108,8 +108,8 @@ Distribuzione normale — NORMINV, RAND
 
 
 ## 📁 File del Progetto
-"Per scaricare il dataset o il file di analisi, accedi alla cartella Progetto Finale, seleziona il file desiderato e clicca sul pulsante 'Download raw file' (o sull'icona della freccia verso il basso) situata in alto a destra nella visualizzazione del file."
-- `progetto finale.xlsx` 
+"Per scaricare il dataset o il file di analisi, accedi alla cartella `progetto finale.xlsx` , clicca su VIEW RAW oppure sull'icona della freccia verso il basso situata in alto a destra nella visualizzazione del file.
+
 
 
 # 👤 Autore
