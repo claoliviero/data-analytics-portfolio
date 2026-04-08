@@ -109,7 +109,7 @@ Per finire , creazione Report, composta da 6 pagine interattive con filtri, segn
 Decisioni basate sui dati, ottimizzazione promozioni, monitoraggio punti vendita, gestione dei resi, e accessibilità
 
 
-# Tecnologie utilizzate
+# 🧠 Tecnologie utilizzate
 Power BI Desktop — creazione del report interattivo
 
 Power Query (M) — trasformazione e merge dei dati
