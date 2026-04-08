@@ -122,7 +122,7 @@ Decomposition Tree — analisi gerarchica avanzata
 .
 
 ## 📁 File del Progetto
-Per scaricare il dataset o il file di analisi, accedi alla cartella Prog finale.pbix , clicca su VIEW RAW oppure sull'icona della freccia verso il vasso situata in alto a destra nella visualizzazione del file. Per la corretta visualizzazione, bisogna avere sul proprio dispositivo Power Bi desktop.
+Per scaricare il dataset o il file di analisi, accedi alla cartella `Prog finale.pbix` , clicca su VIEW RAW oppure sull'icona della freccia verso il vasso situata in alto a destra nella visualizzazione del file. Per la corretta visualizzazione, bisogna avere sul proprio dispositivo Power Bi desktop.
 
 
 
