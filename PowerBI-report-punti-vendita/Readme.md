@@ -11,7 +11,7 @@ Il progetto nasce dall'esigenza di aggregare e visualizzare grandi volumi di dat
 # Struttura del progetto 
 Il report è composto da 6 pagine interattive, navigabili tramite pulsanti dedicati presenti in ogni schermata.
 
-# Pagina 1 ( Vendite per mese )
+# 📌 Pagina 1 ( Vendite per mese )
 Visualizza le vendite aggregate per mese con i relativi fatturati lordi e netti e la scontistica totale. Presenti anche le metriche di unità vendute con il proprio massimo e il proprio minimo.<br>
 Visualizzazioni presenti:
 
@@ -21,7 +21,7 @@ Grafico a barre doppie: Fatturato Lordo vs Fatturato Netto per mese
 
 Segnalibri disponibili: COMPLETO · SCONTO · max&min
 
-# Pagina 2 ( Unità vendute per città )
+# 📌 Pagina 2 ( Unità vendute per città )
 Analisi geografica delle vendite per città e regione, con mappa interattiva. <br>
 Visualizzazioni presenti:
 
@@ -37,7 +37,7 @@ Grafico a barre: Unità Vendute per Area (Centro / Nord / Sud / Isole)
 
 Filtri disponibili: Città · Segnalibri: MAPS · GRAFICI · COMPLETO
 
-# Pagina 3 ( Prodotti )
+# 📌 Pagina 3 ( Prodotti )
 Analisi di tutti i prodotti disponibili con relativi prezzi unitari, fatturati lordi e netti , importo scontistica e incidenza scontistica su di essi.<br>
 Visualizzazioni presenti:
 
@@ -47,7 +47,7 @@ Grafico a linee: Incidenza Sconto per Mese (andamento % mensile)
 
 Filtri disponibili: Descrizione Prodotto · Segnalibri: COMPLETO · INC.SCONTO · NO FILTRO
 
-# Pagina 4 ( Negozi )
+# 📌 Pagina 4 ( Negozi )
 Panoramica completa delle performance per punto vendita, con dati su responsabili e fatturato. <br>
 
 Visualizzazioni presenti:
@@ -62,7 +62,7 @@ Tabella: Top prodotti per unità vendute
 
 Filtri disponibili: Città · Segnalibri: COMPLETO · CITTÀ
 
-# Pagina 5 ( Gestione dei resi )
+# 📌 Pagina 5 ( Gestione dei resi )
 Pagina dedicata all'analisi dei resi per calcolare le vendite nette reali nei mesi di gennaio e febbraio. <br>
 Visualizzazioni presenti:
 
@@ -76,7 +76,7 @@ Grafico a barre: Unità Rese per Città (Roma: 759 resi, prima in classifica)
 
 Segnalibri disponibili: COMPLETO · CITTÀ
 
-# Pagina 6 ( Extra )
+# 📌 Pagina 6 ( Extra )
 Pagina avanzata con visualizzazione ad albero gerarchico (Decomposition Tree) per analisi multi-dimensionale delle unità vendute. La struttura dell'albero e' composta da tre livelli nei quali vengono considerate le somme delle unità vendute nelle rispettive regioni di appartenzenza e in tutti i periodi. Grazie ai filtri presenti , e' possibile andare a fare delle ricerche più dettagliate. <br>
 
 Struttura dell'albero:
