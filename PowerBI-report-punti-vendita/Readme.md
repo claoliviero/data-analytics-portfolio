@@ -1,3 +1,19 @@
+
+<p align="center"> 
+<i> Gestione delle Vendite per Punti Vendita di TechMarket S.p.A. <br> <sub> <img width="18" height="500" alt="image" <img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/f99759f9-9d60-4c90-ab92-a3c0804b155f" />
+Report vendite Con POWER BI </sub></i>
+</p>
+
+
+
+
+
+
+
+
+
+
+
 # Power BI - Gestione Vendite TechMarket S.p.A.
 
 ## 📋 Descrizione
@@ -83,13 +99,6 @@ Performance nette negozi
 
 ## 📁 File del Progetto
 - `prog finale.pbix` - report Power BI completo
-
-## 📈 Risultati Chiave
-✅ Report completo 5 pagine interattive
-✅ Vendite nette calcolate (resi esclusi)
-✅ Dashboard navigabili per manager
-✅ Analisi 2014: trend mensili, top città, top prodotti
-✅ Performance negozio per negozio
 
 ## 🎯 Valore Aggiunto TechMarket
 ✅ Decisioni strategiche data-driven
