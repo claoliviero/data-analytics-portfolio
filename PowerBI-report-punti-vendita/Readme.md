@@ -105,7 +105,7 @@ Fatturato Finale = [Fatturato Netto] - [Importo Resi]
 
 Per finire , creazione Report, composta da 6 pagine interattive con filtri, segnalibri e navifazione tra pagine
 
-# Valore aggiunto per TechMarket 
+# 💡 Valore aggiunto per TechMarket 
 Decisioni basate sui dati, ottimizzazione promozioni, monitoraggio punti vendita, gestione dei resi, e accessibilità
 
 
