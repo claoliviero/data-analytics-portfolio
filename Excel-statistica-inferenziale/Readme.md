@@ -112,6 +112,5 @@ Per scaricare il dataset o il file di analisi, accedi alla cartella `progetto fi
 
 
 
-# 👤 Autore
-Realizzato da: CLAUDIO OLIVIERO
+
 
