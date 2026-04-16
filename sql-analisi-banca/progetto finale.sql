@@ -78,7 +78,7 @@ select
     SUM(CASE WHEN id_tipo_conto = 1 THEN numero_conti ELSE 0 END) AS conti_tipo_1,
     SUM(CASE WHEN id_tipo_conto = 2 THEN numero_conti ELSE 0 END) AS conti_tipo_2,
     SUM(CASE WHEN id_tipo_conto = 3 THEN numero_conti ELSE 0 END) AS conti_tipo_3
-from banca.conteggio_conti
+from banca.tmp_conteggio_conti_2
 group by id_cliente
 order by id_cliente;
 
