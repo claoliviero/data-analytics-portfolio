@@ -1,74 +1,62 @@
-# SQL - Analisi Clienti Banca (Feature Engineering)
-
-## 📋 Descrizione
-Progetto di **feature engineering** per Banking Intelligence. Creazione di una tabella denormalizzata con indicatori comportamentali per modelli di machine learning supervisionato.
-
-## 🎯 Obiettivo
-Sviluppare feature per prevedere comportamenti futuri dei clienti basandosi su dati transazionali e caratteristiche dei conti. La tabella finale aggrega dati per `id_cliente` con indicatori quantitativi e qualitativi.
-
-## 💼 Contesto Aziendale
-**Azienda:** Banking Intelligence  
-**Obiettivo business:** 
-- Predizione comportamento clienti
-- Riduzione churn (tasso abbandono)
-- Gestione rischio
-- Personalizzazione offerte
-- Prevenzione frodi
-
-## 🗄️ Struttura Database
-Database banking con tabelle:
-- `cliente` - informazioni personali (età, ecc.)
-- `conto` - conti posseduti
-- `tipo_conto` - tipologie conti
-- `tipo_transazione` - tipi di transazione
-- `transazioni` - dettagli transazioni
-
-## 📊 Indicatori Comportamentali Calcolati
-
-### **Indicatori Base**
-- Età cliente
-
-### **Indicatori Transazioni**
-✓ Numero transazioni in uscita (tutti conti)
-✓ Numero transazioni in entrata (tutti conti)
-✓ Importo totale transato in uscita
-✓ Importo totale transato in entrata
 
 
 
-### **Indicatori Conti**
-✓ Numero totale conti posseduti
-✓ Conti per tipologia (uno per tipo di conto)
+<p align="center"> 
+<i> Progetto SQL  — Analisi Clienti Banca <br> <sub> <img width="30" height="30" alt="image" src="https://github.com/user-attachments/assets/94d594d8-788e-40fd-86b4-22d2ac8145dd" />
+Analisi clientela banca con creazione tabella denormalizzata per Feature Engineering con MYSQL  </sub></i>
+</p>
 
+# Contesto e Obiettivo
+Banking Intelligence vuole costruire una base dati solida per addestrare un modello di machine learning supervisionato capace di prevedere comportamenti futuri dei clienti a partire dalle loro transazioni e dai conti posseduti.Quindi il progetto ha come obiettivo la creazione di una tabella denormalizzata per cliente per essere riutilizzata per analisi predittive e valutazioni di rischio.
 
+# Struttura del Progetto
+Il database di riferimento è costituito dalle seguenti tabelle:<br>
 
-### **Indicatori per Tipologia Conto**
-Per OGNI tipo di conto:
+* **Cliente:** contiene informazioni personali sui clienti (ad esempio, età).
+* **Conto:** contiene informazioni sui conti posseduti dai clienti.
+* **Tipo_conto:** descrive le diverse tipologie di conti disponibili.
+* **Tipo_transazione:** contiene i tipi di transazione che possono avvenire sui conti.
+* **Transazioni:** contiene i dettagli delle transazioni effettuate dai clienti sui vari conti.
 
-Transazioni in uscita
+ Link al DATABASE 👉 (**https://drive.google.com/file/d/1l54AQ2xGgP-1X6AU8nF53IOCt83I_h88/view**)
 
-Transazioni in entrata
+# Indicatori Comportamentali Calcolati
 
-Importo uscita
+ ###  Indicatori Comportamentali (Livello Cliente)
+Tutti i KPI sono aggregati per `id_cliente` proprio per calcolare le seguenti metriche : 
 
-Importo entrata
+#### 1. Indicatori di Base
+- **Età:** Calcolata dalla data di nascita (`tabella_cliente`).
 
+#### 2. KPI Transazionali (Globali)
+- **Volume Operazioni:** Numero totale transazioni in **uscita** e in **entrata**.
+- **Valore Totale:** Somma importi transati in **uscita** e in **entrata**.
 
+#### 3. KPI Struttura Conti
+- **Conti Totali:** Numero complessivo di rapporti attivi.
+- **Dettaglio per Tipologia:** Conteggio conti suddiviso per categoria (es. CC, Risparmio, Deposito).
 
-## 🔧 Tecnologie Utilizzate
-- **MySQL** - database management
-- **SQL Avanzato** - JOIN multipli, aggregazioni complesse, CTE
-- **Feature Engineering** per machine learning
+#### 4. KPI Transazionali per Tipologia Conto
+*Per ogni tipologia di conto esistente, vengono calcolati:*
+- **Uscita:** Numero operazioni e importo totale.
+- **Entrata:** Numero operazioni e importo totale.
+
+# 💡 Valore Aziendale
+Il Progetto quindi permette di costruire feature utili per le varie diverse attività di business:
+* **Predizione del comportamento dei clienti:** individuare pattern utili per prevedere acquisti, chiusure di conti o variazioni nei comportamenti finanziari.
+* **Riduzione dei rischi** riconoscere i clienti a rischio abbandono e intervenire in anticipo.
+* **Gestione del rischio:** segmentare la clientela in base ai comportamenti finanziari.
+* **Personalizzazione delle offerte:** proporre prodotti coerenti con le abitudini dei singoli clienti.
+* **Prevenzione delle frodi** rilevare anomalie nei movimenti e negli importi transati.
+
+# 🧠 Tecnologie e Competenze Utilizzate
+* **MYSQL** Database management.
+* **Skills SQL** JOIN multipli,logica condizionale,raggruppamenti e funzioni di aggregazione.
+* **Feature Engineering** per machine learning.
 
 ## 📁 File del Progetto
-- `progetto finale.sql` - query completa per creazione tabella feature
+Per visionare il progetto vai nella cartella - `progetto finale.sql` dove sono presenti tutte le query complete.
 
-## 🎯 Valore Aggiunto
-La tabella denormalizzata abilita:
-✅ Predizione churn clienti
-✅ Segmentazione rischio
-✅ Personalizzazione offerte
-✅ Rilevamento anomalie frodi
-✅ Miglioramento customer satisfaction
+
 
 
