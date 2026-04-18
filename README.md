@@ -28,7 +28,7 @@ Tecnologie: Tableau Desk, campi calcolati
 
 Analisi di oltre 25.000 incidenti aerei per individuare trend temporali, operatori più affidabili e distribuzione geografica degli eventi.<br>
 
-Tecnologie: pandas, matplotlib, seaborn, geopandas
+Tecnologie: google colab,python,pandas,matplotlib,numpy,seaborn,geopandas
 
 5. **SQL — Feature Engineering per il settore bancario** <img width="40" height="40" alt="image" src="https://github.com/user-attachments/assets/c4d007ca-c59f-4895-9d92-8356c23eb725" />
 
