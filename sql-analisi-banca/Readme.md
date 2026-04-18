@@ -2,7 +2,7 @@
 
 
 <p align="center"> 
-<i> Progetto SQL  — Analisi Clienti Banca <br> <sub> <img width="30" height="30" alt="image" src="https://github.com/user-attachments/assets/94d594d8-788e-40fd-86b4-22d2ac8145dd" />
+<i> Progetto SQL  — Analisi Clienti Banca <br> <sub> <img width="40" height="40" alt="image" src="https://github.com/user-attachments/assets/94d594d8-788e-40fd-86b4-22d2ac8145dd" />
 Analisi clientela banca con creazione tabella denormalizzata per Feature Engineering con MYSQL  </sub></i>
 </p>
 
