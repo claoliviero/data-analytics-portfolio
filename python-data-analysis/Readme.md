@@ -95,7 +95,8 @@ Il progetto in questione mostra come un dataset storico possa essere trasformato
 
 ## 📁 File del Progetto
 Per visionare il progetto su Notebook Google Colab: [Clicca QUI](https://colab.research.google.com/drive/1ftaYy3EFg4pIgHt19HVkYbLKlEtnoKmS?usp=sharing).<BR>
-Oppure vai nella cartella    e clicca su
+
+Oppure vai nella cartella `Analisi disastri aerei 1919-2013` e consulta l'intero codice.
 
 
 
