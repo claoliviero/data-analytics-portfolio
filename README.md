@@ -16,19 +16,19 @@ Tecnologie: Excel avanzato, Pivot Table , Statistica inferenziale
 
 Dashboard interattiva per il monitoraggio delle vendite 2014 di una rete multi-negozio. Il progetto include anche la gestione dei resi e una navigazione dinamica tra le pagine.<br>
 
-Tecnologie: Power BI, DAX, data modeling
+Tecnologie: Power BI, DAX, Data modeling
 
 3. **Tableau — Superstore Europa** <img width="40" height="40" alt="image" src="https://github.com/user-attachments/assets/b7d26522-ce56-4b1b-a337-8d5c69f02481" />
 
 Dashboard e Story per supportare le decisioni di marketing e adottare strategie di marketing per  l’allocazione del budget prodotto nei mercati europei.<br>
 
-Tecnologie: Tableau Desk, campi calcolati
+Tecnologie: Tableau Desk, Campi calcolati
 
 4. **Python — Disastri Aerei 1919–2023** <img width="40" height="40" alt="image" src="https://github.com/user-attachments/assets/16425580-9977-45e7-802a-eeb0956ce79a" />
 
 Analisi di oltre 25.000 incidenti aerei per individuare trend temporali, operatori più affidabili e distribuzione geografica degli eventi.<br>
 
-Tecnologie: google colab,python,pandas,matplotlib,numpy,seaborn,geopandas
+Tecnologie: Google colab, Python, Pandas, Matplotlib, Numpy, Seaborn, Geopandas
 
 5. **SQL — Feature Engineering per il settore bancario** <img width="40" height="40" alt="image" src="https://github.com/user-attachments/assets/c4d007ca-c59f-4895-9d92-8356c23eb725" />
 
