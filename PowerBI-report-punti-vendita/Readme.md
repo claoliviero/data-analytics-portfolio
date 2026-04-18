@@ -1,6 +1,6 @@
 
 <p align="center"> 
-<i> Progetto Business Intelligence — TechMarket S.p.A. <br> <sub> <img width="30" height="30" alt="image" src="https://github.com/user-attachments/assets/878bdce5-6994-437c-b10b-a931d9f9d036" />
+<i> Progetto Business Intelligence — TechMarket S.p.A. <br> <sub> <img width="40" height="40" alt="image" src="https://github.com/user-attachments/assets/878bdce5-6994-437c-b10b-a931d9f9d036" />
 Gestione delle Vendite per Punti vendita Con POWER BI </sub></i>
 </p>
 
