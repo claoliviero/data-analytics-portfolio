@@ -5,7 +5,7 @@ Analisi Disastri Aerei 1919-2023 (IASS) con Python </sub></i>
 </p>
 
 # Contesto e Obiettivo
-IASS (International Alliance for Safe Skies) ha incaricato l’analisi completa degli incidenti aerei avvenuti tra il 1919 e il 2023.L'obiettivo finale del progetto è trasformare questo ricco dataset storico di quasi 25.000 incidenti in una lettura chiara e intuitiva , capace quindi di evidenziare i possibili tred, aree geografiche critiche, gli operatori più sicuri e le caratteristiche dei velivoli che sono stati più coinvolti nei disastri.
+IASS (International Alliance for Safe Skies) ha incaricato l’analisi completa degli incidenti aerei avvenuti tra il 1919 e il 2023.L'obiettivo finale del progetto è trasformare questo ricco dataset storico di quasi 25.000 incidenti in una lettura chiara e intuitiva , capace quindi di evidenziare i possibili trend, aree geografiche critiche, gli operatori più sicuri e le caratteristiche dei velivoli che sono stati più coinvolti nei disastri.
 
 # Struttura del Progetto
 Il dataset contiene informazioni su :
@@ -80,6 +80,8 @@ Dal 2001 in poi si osserva una dinamica temporale utile per leggere l’evoluzio
 - **Top 20 incidenti con più vittime**
 - **Cartogramma mondiale 1919–2023**
 
+##### - Sono presenti immagini relative al progetto e alle visualizzazioni realizzate nella cartella Screenshots.
+
 # 💡 Valore Aziendale
 
 L'insieme delle visualizzazioni permette di leggere il fenomeno degli incidenti aerei su più aspetti, tra i quali quello geografico,temporale,operativo e tecnico.
@@ -96,7 +98,9 @@ Il progetto in questione mostra come un dataset storico possa essere trasformato
 ## 📁 File del Progetto
 Per visionare il progetto su Notebook Google Colab: [Clicca QUI](https://colab.research.google.com/drive/1ftaYy3EFg4pIgHt19HVkYbLKlEtnoKmS?usp=sharing).<BR>
 
-Oppure vai nella cartella `Analisi disastri aerei 1919-2013` e consulta l'intero codice.
+Oppure vai nella cartella `Analisi disastri aerei 1919-2013` e consulta l'intero codice. <br>
+
+
 
 
 
