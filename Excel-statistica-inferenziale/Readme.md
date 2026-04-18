@@ -1,6 +1,6 @@
 
 <p align="center"> 
-<i> Progetto didattico — Popolazione immaginaria "Luggnagg" <br> <sub> <img width="20" height="20" alt="image" src="https://github.com/user-attachments/assets/376f9b83-a04e-4b29-aa10-2c7b62b66d96" /> Statistica Inferenziale con EXCEL </sub></i>
+<i> Progetto didattico — Popolazione immaginaria "Luggnagg" <br> <sub> <img width="40" height="40" alt="image" src="https://github.com/user-attachments/assets/376f9b83-a04e-4b29-aa10-2c7b62b66d96" /> Statistica Inferenziale con EXCEL </sub></i>
 </p>
 
 
