@@ -1,75 +1,128 @@
-# Python - Analisi Disastri Aerei 1919-2023 (IASS)
 
-## 📋 Descrizione
-Analisi completa ~25.000 incidenti aerei (1919-2023) per **IASS (International Alliance for Safe Skies)**. Exploratory Data Analysis con visualizzazioni e insights per sicurezza voli.
+<p align="center"> 
+<i> Progetto didattico — Disastri Aerei  <br> <sub> <img width="40" height="40" alt=<img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/28e47ba2-744d-40f5-98bc-a3a283f28c9c" />
+Analisi Disastri Aerei 1919-2023 (IASS) con Python </sub></i>
+</p>
 
-## 🎯 Obiettivo
-Portare alla luce pattern e trend negli incidenti aerei per:
-- Identificare nazioni/operatori a rischio
-- Analizzare evoluzione sicurezza aerea
-- Individuare velivoli più pericolosi
-- Studiare impatto eventi storici (es. 11 Settembre)
+# Contesto e Obiettivo
+La neonata IASS (International Alliance for Safe Skies) ha incaricato l’analisi completa degli incidenti aerei avvenuti tra il 1919 e il 2023.L'obiettivo finale del progetto è trasformare questo ricco dataset storico di quasi 25.000 incidenti in una lettura chiara e intuitiva , capace quindi di evidenziare i possibili tred, aree geografiche critiche, gli operatori più sicuri e le caratteristiche dei velivoli che sono stati più coinvolti nei disastri.
 
-## 🏢 Cliente
-**IASS - International Alliance for Safe Skies** (organizzazione internazionale sicurezza aerea)
+# Struttura del Progetto
+Il dataset contiene informazioni su :
 
-## 🗄️ Dataset
-~25.000 incidenti aerei (1919-2023)
+* **Date dell’incidente:** Date di ogni areo coinvolto in un'incidente.
+* **tipo di velivolo;** Caratteristica del velivolo.
+* **codice di registrazione:** Identificativo velivolo.
+* **operatore:** Operatore che ha gestito il velivolo.
+* **numero di vittime:** Vittime coninvolte negli incidenti.
+* **luogo dell’incidente:** Ubicazione del disastro.
+* **nazione:** Nazionalità.
+* **categoria ASN.** Categorie Aeromobili.
 
-Variabili:
-✓ date: data incidente
-✓ type: tipo velivolo
-✓ registration: codice registrazione
-✓ operator: operatore del velivolo
-✓ fatalities: numero morti
-✓ location: luogo incidente
-✓ country: nazione incidente
-✓ cat: categoria incidente (ASN classification)
+ Link al DATABASE 👉 **(https://proai-datasets.s3.eu-west-3.amazonaws.com/aviation-accidents.csv)**
 
-## 🔍 Analisi Svolte
+# Domande Analitiche
+Il progetto cerca di rispondere a domande del tipo :
+- In quale nazione si sono verificati più incidenti?
+- Gli incidenti sono più frequenti in alcuni giorni della settimana?
+- Quali operatori risultano più sicuri?
+- Quale tipo di velivolo ha causato più vittime?
+- Come sono cambiati incidenti e vittime dopo l’11 settembre 2001?
 
-### **1. Analisi Geografica**
-📍 Nazione con più incidenti
-📊 Distribuzione incidenti per continente
-🗺️ Cartogramma mondiale (BONUS)
+È stato inoltre creato un **cartogramma mondiale** per visualizzare il numero di incidenti per nazione.
 
-### **2. Analisi Temporale**
-📅 Trend incidenti per decade (1919-2023)
-📆 Giorni settimana più pericolosi
-📈 Evoluzione post 11 Settembre 2001
-🌊 Stagionalità incidenti (mesi)
+# Fasi del progetto
+Prima dell’analisi, il dataset è stato pulito e standardizzato. <br>
 
-### **3. Analisi Operatori**
-✈️ Operatori più sicuri (meno incidenti)
-⚠️ Operatori a rischio (più incidenti)
-💀 Fatalità medie per operatore
+`df_clean['operator'] = df_clean['operator'].astype(str).str.strip().str.lower()` <br>
+`df_clean['location'] = df_clean['location'].astype(str).str.strip().str.lower()` <br>
+`df_clean['country'] = df_clean['country'].astype(str).str.strip().str.lower()`<br>
 
-### **4. Analisi Velivoli**
-🛩️ Tipo velivolo con più morti totali
-📊 Velivoli più coinvolti in incidenti
-🔍 Correlazione tipo velivolo - categoria incidente
+Successivamente le  principali operazioni eseguite sono state:
+- normalizzazione di testi come `operator`, `location` e `country`;
+- sostituzione dei valori mancanti o anomali con `NaN`;
+- parsing della colonna `date` in formato data;
+- estrazione dell’anno;
+- conversione della colonna `fatalities` in formato numerico.
 
-### **5. Analisi Fatalità**
-💀 Morti totali per decade
-📉 Trend tasso fatalità nel tempo
-🔴 Incidenti più letali (top 10)
 
-## 🛠️ Tecnologie Python
-python
-✅ pandas - data manipulation
-✅ matplotlib - visualizzazioni base
-✅ seaborn - grafici statistici avanzati
-✅ numpy - calcoli numerici
-✅ geopandas - cartogramma mondiale (BONUS)
-✅ plotly (opzionale) - grafici interattivi
-📊 Visualizzazioni Create
+**Alcuni passaggi(non codice completo) delle operazioni elencate precedentemente:**<br>
+`missing_tokens = ['?', 'unknown', 'unk', 'unk.', 'date unk.', 'n/a', '-', 'none', '', "unknown country"]`<br>
+`df_clean[cols] = df_clean[cols].replace(missing_tokens, np.nan)`<br>
+`df_clean['date_parsed'] = pd.to_datetime(df_clean['date'], errors='coerce', dayfirst=True)`<br>
+`df_clean['fatalities'] = df_clean['fatalities'].astype(str).str.strip().str.lower()`<br>
+`missing_tokens_fatalities = ['?', 'unknown', 'unk', 'n/a', '-', '', 'none']`<br>
 
-📈 Line plot: trend incidenti nel tempo
-📊 Bar chart: top 10 nazioni per incidenti
-🗺️ Choropleth map: cartogramma mondiale
-📊 Box plot: distribuzione fatalità per operatore
-📈 Before/After: confronto pre/post 11 Settembre
+# Insight Principali calcolati
 
-📁 **File del Progetto** :
+### Paesi con più incidenti :
+L’analisi mostra che gli USA sono nettamente il paese con il maggior numero di incidenti, seguiti da Russia, Regno Unito, Canada e India.
 
-👉 :link: **[Visualizza Progetto su Google Colab]( https://colab.research.google.com/drive/1ftaYy3EFg4pIgHt19HVkYbLKlEtnoKmS?usp=sharing)** :link:
+### Incidenti per giorno della settimana
+Gli incidenti sembrano concentrarsi leggermente di più verso la fine della settimana, con il venerdì come giorno più frequente nel dataset analizzato.
+
+### Operatori più sicuri
+Gli operatori con il minor numero medio di vittime per incidente, considerando solo quelli con almeno 10 eventi, risultano tra i più affidabili dal punto di vista statistico.Un appunto da considerare è che sicuramente sono presenti operatori nati negli ultimi anni, quindi non presenti nelle date iniziali del dataset.
+
+### Tipi di velivolo con più morti
+Alcuni modelli storici, in particolare il *Douglas C-47*, emergono come i più coinvolti in incidenti con alto numero di vittime. Il velivolo in questione era usato come trasporto militare bimotore, basato sul civile DC-3, ampiamente utilizzato durante la Seconda Guerra Mondiale.
+
+### Evoluzione dopo l’11 settembre
+Dal 2001 in poi si osserva una dinamica temporale utile per leggere l’evoluzione del fenomeno, sia in termini di incidenti sia di vittime annuali.
+
+# Visualizzazioni Realizzate
+
+- **Paesi con più incidenti aerei (Top 20)**
+- **Incidenti aerei per giorno della settimana**
+- **Operatori più sicuri**
+- **Tipi di velivolo con più morti totali**
+- **Incidenti e vittime annuali dopo l’11 settembre 2001**
+- **Top 20 incidenti con più vittime**
+- **Cartogramma mondiale 1919–2023**
+
+# 💡 Valore Aziendale
+
+L'insieme delle visualizzazioni permette di leggere il fenomeno degli incidenti aerei su più aspetti, tra i quali quello geografico,temporale,operativo e tecnico.
+Il progetto in questione mostra come un dataset storico possa essere trasformato in un visualizzazione, narazzione analitica utile per inviduare pattern,aree critiche e possibili riflessioni di approfondimento.
+
+# 🧠 Tecnologie e Competenze Utilizzate
+- Python, linguaggio di programmazione .
+- Pandas, libreria principale per la manipolazione dei dati.
+- Numpy, libreria per il calcolo scientifico.
+- Matplotlib, standard visualizzazione dei dati, permette di creare grafici.
+- Geopandas, È un'estensione di Pandas specifica per i dati geografici.
+- Google Colab, ambiente di sviluppo, piattaforma cloud gratuita basata sui Notebook Jupyter , permette quindi di eseguire il nostro codice Python.
+
+## 📁 File del Progetto
+Per visionare il progetto su Notebook Google Colab: [Clicca QUI](https://colab.research.google.com/drive/1ftaYy3EFg4pIgHt19HVkYbLKlEtnoKmS?usp=sharing).<BR>
+Oppure vai nella cartella    e clicca su
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
