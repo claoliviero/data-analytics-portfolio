@@ -1,6 +1,6 @@
 
 <p align="center"> 
-<i> Progetto - Analisi delle vendite di una catena di supermercati <br> <sub> <img width="18" height="500" alt="image" <img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/5d6ca38c-dbbd-41d9-9cb3-49f644f50c7b" />
+<i> Progetto - Analisi delle vendite di una catena di supermercati <br> <sub> <img width="40" height="40" alt="image" <img width="30 height="30" alt="image" src="https://github.com/user-attachments/assets/5d6ca38c-dbbd-41d9-9cb3-49f644f50c7b" />
 Ottimizzazione Data-Driven per Superstore in Europa con Tableau </sub></i>
 </p>
 
