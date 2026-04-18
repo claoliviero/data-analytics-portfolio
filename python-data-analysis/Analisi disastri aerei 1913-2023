@@ -1,0 +1,158 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# -----------------------------
+# 1️⃣ Caricamento dataset
+df = pd.read_csv("aviation-accidents.csv")
+df_clean = df.copy()
+
+# -----------------------------
+# Pulizia testi
+df_clean['operator'] = df_clean['operator'].astype(str).str.strip().str.lower()
+df_clean['location'] = df_clean['location'].astype(str).str.strip().str.lower()
+df_clean['country'] = df_clean['country'].astype(str).str.strip().str.lower()
+
+# Valori mancanti standard
+missing_tokens = ['?', 'unknown', 'unk', 'unk.', 'date unk.', 'n/a', '-', 'none', '', "unknown country"]
+cols = ['date', 'location', 'operator', 'registration', 'country', 'cat', 'type']
+df_clean[cols] = df_clean[cols].replace(missing_tokens, np.nan)
+
+# -----------------------------
+# Parsing date
+df_clean['date_parsed'] = pd.to_datetime(df_clean['date'], errors='coerce', dayfirst=True)
+df_clean['year_from_date'] = df_clean['date_parsed'].dt.year
+
+# -----------------------------
+# Pulizia fatalities
+df_clean['fatalities'] = df_clean['fatalities'].astype(str).str.strip().str.lower()
+missing_tokens_fatalities = ['?', 'unknown', 'unk', 'n/a', '-', '', 'none']
+df_clean['fatalities'] = df_clean['fatalities'].replace(missing_tokens_fatalities, np.nan)
+df_clean['fatalities'] = pd.to_numeric(df_clean['fatalities'], errors='coerce')
+
+# -----------------------------
+# Nota sui dati mancanti
+print("Nota: il dataset contiene alcuni valori mancanti nella categoria fatalities e date,non sono stati portati a zero o null , \n per avere un'analisi più realistica.")
+# -----------------------------
+# 1️⃣ Nazioni con più incidenti
+incidents_per_country = df_clean.groupby('country')['date_parsed'].count().sort_values(ascending=False).head(20)
+plt.figure(figsize=(12,6))
+incidents_per_country.plot(kind='bar', color='skyblue')
+plt.title("Paesi con più incidenti aerei (Top 20)")
+plt.ylabel("Numero di incidenti")
+plt.xticks(rotation=45)
+plt.show()
+
+# -----------------------------
+# 2️⃣ Incidenti per giorno della settimana
+df_days = df_clean[df_clean['date_parsed'].notna()].copy()
+df_days['weekday'] = df_days['date_parsed'].dt.day_name()
+incidents_per_weekday = df_days['weekday'].value_counts()
+plt.figure(figsize=(12,6))
+incidents_per_weekday.plot(kind='bar', color='salmon')
+plt.title("Incidenti aerei per giorno della settimana")
+plt.ylabel("Numero di incidenti")
+plt.xticks(rotation=45)
+plt.show()
+
+# -----------------------------
+# 3️⃣ Operatori più sicuri (media vittime per incidente)
+# Filtriamo operatori validi
+df_valid = df_clean[df_clean['operator'].notna()].copy()
+df_valid = df_valid[~df_valid['operator'].str.strip().isin(['', 'nan', 'none', 'unk'])]
+df_valid['fatalities_filled'] = df_valid['fatalities'].fillna(0)
+
+# Numero di incidenti per operatore
+operator_counts = df_valid.groupby('operator')['fatalities_filled'].count()
+# Somma vittime per operatore
+fatalities_sum = df_valid.groupby('operator')['fatalities_filled'].sum()
+
+# Media vittime per incidente
+fatalities_per_operator_avg = fatalities_sum / operator_counts
+
+# Consideriamo solo operatori con almeno 10 incidenti
+operator_counts_filtered = operator_counts[operator_counts >= 10].index
+fatalities_per_operator_avg_filtered = fatalities_per_operator_avg[operator_counts_filtered]
+
+# Ordiniamo dal più sicuro (media più bassa)
+safest_operators = fatalities_per_operator_avg_filtered.sort_values(ascending=True).head(20)
+
+plt.figure(figsize=(12,6))
+safest_operators.plot(kind='bar', color='green')
+plt.title("Operatori più sicuri (media vittime per incidente, Top 20)")
+plt.ylabel("Media morti per incidente")
+plt.xticks(rotation=60, ha='right')
+plt.show()
+
+# -----------------------------
+# 4️⃣ Tipi di velivolo con più morti
+fatalities_per_type = df_valid.groupby('type')['fatalities_filled'].sum().sort_values(ascending=False).head(20)
+plt.figure(figsize=(12,6))
+fatalities_per_type.plot(kind='bar', color='red')
+plt.title("Tipi di velivolo con più morti totali (Top 20)")
+plt.ylabel("Numero di morti")
+plt.xticks(rotation=60, ha='right')
+plt.show()
+
+# -----------------------------
+# 5️⃣ Trend incidenti e vittime post 11 settembre
+post_9_11 = df_clean[df_clean['date_parsed'] >= pd.Timestamp('2001-09-11')]
+incidents_post_9_11 = post_9_11.groupby('year_from_date')['date_parsed'].count()
+fatalities_post_9_11 = post_9_11.groupby('year_from_date')['fatalities'].sum()
+
+plt.figure(figsize=(14,6))
+plt.plot(incidents_post_9_11.index, incidents_post_9_11.values, marker='o', linestyle='-', label="Incidenti")
+plt.plot(fatalities_post_9_11.index, fatalities_post_9_11.values, marker='x', linestyle='--', label="Vittime")
+plt.title("Incidenti e vittime annuali dopo l'11 settembre 2001")
+plt.xlabel("Anno")
+plt.ylabel("Numero")
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# -----------------------------
+# 6️⃣ Grandi disastri (>100 morti)
+# Filtriamo record con vittime >0 per non prendere righe con NaN avendo quindi un numero di vittime noto
+df_valid_fatal = df_clean[df_clean['fatalities'].notna()]
+
+# Ordinamento per fatalities con maggior numero di incidenti
+top20_disastri = df_valid_fatal.sort_values(by='fatalities', ascending=False).head(20)
+
+# Selezioniamo le colonne utili
+top20_disastri_display = top20_disastri[['date_parsed', 'country', 'operator', 'type', 'fatalities', 'location']]
+
+# Mostriamo tabella
+print("Top 20 incidenti con più vittime:")
+print(top20_disastri_display.to_string(index=False))
+
+
+#Cartogramma Codice
+
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+
+# Carica dati incidenti
+df = pd.read_csv("aviation-accidents.csv")
+df['country'] = df['country'].astype(str).str.strip().str.lower()
+
+# Conta incidenti per paese
+incidents = df.groupby('country').size().reset_index(name='num_incidents')
+
+# Carica mappa mondiale
+url = "https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip"
+world = gpd.read_file(url)
+world['country'] = world['ADMIN'].str.lower()
+
+# Unisci e riempi i mancanti
+merged = world.merge(incidents, on='country', how='left').fillna({'num_incidents': 0})
+
+# Mostra cartogramma
+merged.plot(column='num_incidents', cmap='coolwarm', legend=True, figsize=(20,10), edgecolor='0.4')
+plt.title("Numero di incidenti aerei per nazione (1919–2023)", fontsize=15)
+plt.axis('off')
+plt.show()
+
+
+
+
