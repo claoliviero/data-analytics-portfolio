@@ -8,7 +8,7 @@ Ogni progetto nasce con un obiettivo preciso, trasformare i dati grezzi in insig
 
 1. **Excel — Statistica Inferenziale** <img width="40" height="40" alt="image" src="https://github.com/user-attachments/assets/54f82088-f818-4a8c-ab0b-359e28e5440f" />
 
-Progetto basato sulla popolazione immaginaria di Luggnagg, con 250 individui generati attraverso distribuzione normale. Ho realizzato un’analisi statistica completa, utilizzando regressione lineare , coefficiente  di Pearson.<br>
+Progetto basato sulla popolazione immaginaria di Luggnagg, con 250 individui generati attraverso distribuzione normale. Ho realizzato un’analisi statistica completa, utilizzando regressione lineare e coefficiente  di Pearson.<br>
 
 Tecnologie: Excel avanzato, Pivot Table , Statistica inferenziale
 
@@ -20,7 +20,7 @@ Tecnologie: Power BI, DAX, Data modeling
 
 3. **Tableau — Superstore Europa** <img width="40" height="40" alt="image" src="https://github.com/user-attachments/assets/b7d26522-ce56-4b1b-a337-8d5c69f02481" />
 
-Dashboard e Story per supportare le decisioni di marketing e adottare strategie di marketing per  l’allocazione del budget prodotto nei mercati europei.<br>
+Dashboard e Story per supportare le decisioni di marketing e adottare strategie per  l’allocazione del budget prodotto nei mercati europei.<br>
 
 Tecnologie: Tableau Desk, Campi calcolati
 
