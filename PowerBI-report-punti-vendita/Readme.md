@@ -91,7 +91,7 @@ Segnalibri disponibili: COMPLETO · ALBERO
 
 # Fasi di sviluppo 
 
-La prima fase consiste nel caricamento dei relativi file ( VAENDITE MENSILI, ANAGRAFICHE NEGOZI, PRODOTTI , PROVICE ITALIANE ). Completato il caricamento si prodece con la trasformazione dei dati in Power Query effettuando i vari MERGE DI QUERY per unire le tabelle e ottenere i prezzi unitari con la descrizione del prodotto per ogni Prodotto_id. Si passa alla normalizzazione delle colonne, pulizia dei dati, e creazione di colonne calcolate ( es. Fatturaro lordo, Fatturato netto, Incidenza Sconto ).Nella fase successiva si passa alla Modellazione dei dati con DAX per creare le seguenti misure : <br>
+La prima fase consiste nel caricamento dei relativi file ( VENDITE MENSILI, ANAGRAFICHE NEGOZI, PRODOTTI , PROVINCE ITALIANE ). Completato il caricamento si prodece con la trasformazione dei dati in Power Query effettuando i vari MERGE DI QUERY per unire le tabelle e ottenere i prezzi unitari con la descrizione del prodotto per ogni Prodotto_id. Si passa alla normalizzazione delle colonne, pulizia dei dati, e creazione di colonne calcolate ( es. Fatturaro lordo, Fatturato netto, Incidenza Sconto ).Nella fase successiva si passa alla Modellazione dei dati con DAX per creare le seguenti misure : <br>
 
 Fatturato Lordo = SUMX(Vendite, [Unità Vendute] * [Prezzo Unitario])
 
