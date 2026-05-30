@@ -24,13 +24,19 @@ Dashboard e Story per supportare le decisioni di marketing e adottare strategie 
 
 Tecnologie: Tableau Desk, Campi calcolati
 
-4. **Python — Disastri Aerei 1919–2023** <img width="40" height="40" alt="image" src="https://github.com/user-attachments/assets/16425580-9977-45e7-802a-eeb0956ce79a" />
+4. **Python — Natural Language Processing(NLP)** <img width="40" height="40" alt="image" src="https://github.com/user-attachments/assets/16425580-9977-45e7-802a-eeb0956ce79a" />
+
+Progetto realizzato per rispondere alla crescente minaccia delle fake news sui social media, sviluppando un modello di Machine Learning basato su NLP.
+
+Tecnologie: Google colab, Python, Pandas, Matplotlib, Numpy, Scikit-Learn, NLTK, Regex(RE), Pickle
+
+5. **Python — Disastri Aerei 1919–2023** <img width="40" height="40" alt="image" src="https://github.com/user-attachments/assets/16425580-9977-45e7-802a-eeb0956ce79a" />
 
 Analisi di oltre 25.000 incidenti aerei per individuare trend temporali, operatori più affidabili e distribuzione geografica degli eventi.<br>
 
 Tecnologie: Google colab, Python, Pandas, Matplotlib, Numpy, Seaborn, Geopandas
 
-5. **SQL — Feature Engineering per il settore bancario** <img width="40" height="40" alt="image" src="https://github.com/user-attachments/assets/c4d007ca-c59f-4895-9d92-8356c23eb725" />
+6. **SQL — Feature Engineering per il settore bancario** <img width="40" height="40" alt="image" src="https://github.com/user-attachments/assets/c4d007ca-c59f-4895-9d92-8356c23eb725" />
 
 Ho costruito una tabella denormalizzata con oltre 30 feature comportamentali a partire da un database bancario, con l’obiettivo di preparare i dati per attività di machine learning e analisi predittiva.<br>
 
