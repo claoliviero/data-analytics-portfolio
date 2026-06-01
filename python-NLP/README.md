@@ -17,7 +17,7 @@ L'analisi è basata su due dataset contenenti migliaia di articoli:
 * **Notizie False** (`Fake.csv`)
 
 I dati contengono informazioni fondamentali come il titolo dell'articolo, il testo completo, la tematica (subject) e la data di pubblicazione.
-Link al al DATABASE 👉 (https://proai-datasets.s3.eu-west-3.amazonaws.com/fake_news.zip)
+Link al al DATASET 👉 (https://proai-datasets.s3.eu-west-3.amazonaws.com/fake_news.zip)
 
 ## Domande Analitiche
 
