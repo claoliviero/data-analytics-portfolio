@@ -113,7 +113,7 @@ Il modello è stato infine esportato in formato .pkl (pickle) pronto per essere 
 - **Distribuzione lunghezza testo: Fake vs True**
 - **Confusion Matrix**
 
-##### - Sono presenti immagini relative al progetto e alle visualizzazioni realizzate nella cartella Screenshots.
+##### - Sono presenti immagini e visualizzazioni relative al progetto nella cartella Screenshots.
 
 # 💡 Valore Aziendale
 Il sistema di rilevamento delle fake news avrà un impatto significativo a livello sociale, garantendo: - Riduzione della disinformazione: aiutando gli utenti a identificare tempestivamente notizie non attendibili. - Miglioramento della fiducia nei media: fornendo strumenti tecnologici avanzati per contrastare il problema della disinformazione. - Supporto decisionale: utenti e istituzioni potranno prendere decisioni basate su informazioni più affidabili.
